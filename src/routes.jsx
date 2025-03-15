@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "./Root";
 import Home from "./components/home/Home";
 import Coin from "./components/coin/Coin";
-import Favorites from "./components/favorites/favorites";
+import Favorites from "./components/favorites/Favorites";
 
 const router = createBrowserRouter([
   {

@@ -1,18 +1,23 @@
 .favoritesContainer {
     max-width: 600px;
-    margin: auto;
+    margin: 20px auto;
     padding: 20px;
     text-align: center;
+    background-color:rgb(254, 155, 188);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(153, 40, 40, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .noFavorites {
     font-size: 1.2em;
     color: #777;
-  }
+    font-family: "Arial", Arial, Helvetica, sans-serif;  }
   
   .favoritesList {
     list-style: none;
     padding: 0;
+
   }
   
   .favoriteItem {
@@ -21,10 +26,12 @@
     padding: 15px;
     border-radius: 10px;
     transition: 0.3s;
+    text-align: center;
+    color: white;
   }
   
   .favoriteItem:hover {
-    background: #ddd;
+    background: #d098c0;
   }
   
   .favoriteLink {

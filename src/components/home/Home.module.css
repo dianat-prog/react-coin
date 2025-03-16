@@ -4,7 +4,6 @@
     padding: 20px;
     text-align: center;
     background-color: rgb(254, 155, 188);
-    font-family: Arial, Helvetica, sans-serif;
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(153, 40, 40, 0.3);
  }
@@ -52,4 +51,44 @@
     color: green;
     font-weight: bold;
   }
-   
+  
+  .loading {
+    color: #00a8ff;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+
+  .error {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  /*Paginación*/
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .pagination button {
+    background: #7e513c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination button:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+  
+  .pagination button:hover:not(:disabled) {
+    background: #aa6f53;
+  }

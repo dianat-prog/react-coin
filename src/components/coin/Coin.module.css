@@ -5,7 +5,7 @@
     justify-content: center;
     height: 100vh;
     background-color: #e7e1e1;
-    color: #ffffff;
+       color: #050404;
     font-family: "Arial", sans-serif;
   }
   
@@ -21,7 +21,7 @@
   }
   
   .coin_details {
-    background-color: #1a1a2e;
+   background-color:  rgb(254, 155, 188);;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(153, 40, 40, 0.3);
@@ -85,7 +85,7 @@
   
   
   .favButton {
-    background-color: #007bff;
+    background-color: #7e513c;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -96,7 +96,7 @@
   }
   
   .favButton:hover {
-    background-color: #0056b3;
+    background-color:  #aa6f53;
   }
   
   .favButtonActive {
@@ -111,7 +111,7 @@
   }
   
   .favButtonActive:hover {
-    background-color: #cc0000;
+    background-color: #529167;
   }
   
       

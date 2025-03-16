@@ -42,8 +42,8 @@ const Home = () => {
   return (
     <div className={styles.homeContainer}>
       <h1>📊 Principales Criptomonedas</h1>
-      {loading && <p className="loading">⏳ Cargando...</p>}
-      {error && <p className="error">{error}</p>}
+      {loading && <p className={styles.loading} >⏳ Cargando...</p>}
+      {error && <p className={styles.error}>{error}</p>}
       
       {!loading && !error && (
         <>
@@ -62,11 +62,11 @@ const Home = () => {
               </li>
             ))}
           </ul>
-          <div className="pagination">
+          <div className={styles.pagination}>
             <button onClick={handlePrev} disabled={page === 1}>
               Anterior
             </button>
-            <span>Página {page}</span>
+            <span> Página {page} </span>
             <button onClick={handleNext}>
               Siguiente
             </button>

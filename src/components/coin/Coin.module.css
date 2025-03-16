@@ -57,7 +57,7 @@
   
   h1 {
     font-size: 3rem;
-    margin-bottom: 12px;
+    margin-bottom: 12px; 
   
   }
   /*spinner*/
@@ -122,4 +122,4 @@
     100% {
       transform: rotate(360deg);
     }
-  }
+  } 

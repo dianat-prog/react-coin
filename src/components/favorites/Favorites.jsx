@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Favorites.css"; 
+import styles from "./Favorites.module.css"; 
 
 const Favorites = () => {
   const [favorites, setFavorites] = useState([]);
@@ -12,18 +12,18 @@ const Favorites = () => {
   }, []);
 
   return (
-    <div className="favorites-container">
+    <div className={styles.favoritesContainer}>
       <h1>⭐ Criptomonedas Favoritas</h1>
 
       {favorites.length === 0 ? (
-        <p className="no-favorites">No tienes criptomonedas favoritas aún.</p>
+        <p className={styles.noFavorites}>No tienes criptomonedas favoritas aún.</p>
       ) : (
-        <ul className="favorites-list">
+        <ul className={styles.favoritesList}>
           {favorites.map((coin) => (
-            <li key={coin.id} className="favorite-item">
-              <Link to={`/coin/${coin.id}`} className="favorite-link">
-                <span className="favorite-name">{coin.name} ({coin.symbol})</span>
-                <span className="favorite-price">💰 ${parseFloat(coin.priceUsd).toFixed(2)}</span>
+            <li key={coin.id} className={styles.favoriteItem}>
+              <Link to={`/coin/${coin.id}`} className={styles.favoriteLink}>
+                <span className={styles.favoriteName}>{coin.name} ({coin.symbol})</span>
+                <span className={styles.favoritePrice}>💰 ${parseFloat(coin.priceUsd).toFixed(2)}</span>
               </Link>
             </li>
           ))}

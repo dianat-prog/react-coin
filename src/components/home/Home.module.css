@@ -1,4 +1,4 @@
-.home-container {
+.homeContainer {
     max-width: 800px;
     margin: auto;
     padding: 20px;
@@ -6,12 +6,12 @@
     background-color: #e7e1e1;
  }
   
-  .crypto-list {
+  .cryptoList {
     list-style: none;
     padding: 0;
   }
   
-  .crypto-item {
+  .cryptoItem {
     background: #6e5858;
     margin: 10px 0;
     padding: 15px;
@@ -20,11 +20,11 @@
     color: white;
   }
   
-  .crypto-item:hover {
+  .cryptoItem:hover {
     background: #ddd;
   }
   
-  .crypto-link {
+  .cryptoLink {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,18 +33,18 @@
     font-weight: bold;
   }
   
-  .crypto-rank {
+  .cryptoRank {
     font-size: 1.2em;
     color: #777;
   }
   
-  .crypto-name {
+  .cryptoName {
     flex-grow: 1;
     text-align: left;
     margin-left: 10px;
   }
   
-  .crypto-price {
+  .cryptoPrice {
     color: green;
     font-weight: bold;
   }

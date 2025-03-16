@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Home.css";
+import styles from "./Home.module.css";
 
 const Home = () => {
   const [coins, setCoins] = useState([]);
@@ -18,7 +18,10 @@ const Home = () => {
           `https://api.coincap.io/v2/assets?limit=${limit}&offset=${offset}`
         );
         const data = await response.json();
-        setCoins(data.data);
+        if (!Array.isArray(data.data)) {
+          throw new Error("La API no devolvió un array");
+        }
+        setCoins(Array.isArray(data.data)? data.data: []);
       } catch (error) {
         setError("Error al obtener las criptomonedas.");
       }
@@ -37,22 +40,22 @@ const Home = () => {
   };
 
   return (
-    <div className="home-container">
+    <div className={styles.homeContainer}>
       <h1>📊 Principales Criptomonedas</h1>
       {loading && <p className="loading">⏳ Cargando...</p>}
       {error && <p className="error">{error}</p>}
       
       {!loading && !error && (
         <>
-          <ul className="crypto-list">
-            {coins.map((coin) => (
-              <li key={coin.id} className="crypto-item">
-                <Link to={`/coin/${coin.id}`} className="crypto-link">
-                  <span className="crypto-rank">#{coin.rank}</span>
-                  <span className="crypto-name">
+          <ul className={styles.cryptoList}>
+            {coins?.map((coin) => (
+              <li key={coin.id} className={styles.cryptoItem}>
+                <Link to={`/coin/${coin.id}`} className={styles.cryptoLink}>
+                  <span className={styles.cryptoRank}>#{coin.rank}</span>
+                  <span className={styles.cryptoName}>
                     {coin.name} ({coin.symbol})
                   </span>
-                  <span className="crypto-price">
+                  <span className={styles.cryptoPrice}>
                     💰 ${parseFloat(coin.priceUsd).toFixed(2)}
                   </span>
                 </Link>

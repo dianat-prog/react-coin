@@ -1,21 +1,21 @@
-.favorites-container {
+.favoritesContainer {
     max-width: 600px;
     margin: auto;
     padding: 20px;
     text-align: center;
   }
   
-  .no-favorites {
+  .noFavorites {
     font-size: 1.2em;
     color: #777;
   }
   
-  .favorites-list {
+  .favoritesList {
     list-style: none;
     padding: 0;
   }
   
-  .favorite-item {
+  .favoriteItem {
     background: #f4f4f4;
     margin: 10px 0;
     padding: 15px;
@@ -23,11 +23,11 @@
     transition: 0.3s;
   }
   
-  .favorite-item:hover {
+  .favoriteItem:hover {
     background: #ddd;
   }
   
-  .favorite-link {
+  .favoriteLink {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,13 +36,13 @@
     font-weight: bold;
   }
   
-  .favorite-name {
+  .favoriteName {
     flex-grow: 1;
     text-align: left;
     margin-left: 10px;
   }
   
-  .favorite-price {
+  .favoritePrice {
     color: green;
     font-weight: bold;
   }

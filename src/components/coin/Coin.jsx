@@ -14,8 +14,10 @@ const Coin = () => {
     const fetchCoin = async () => {
       try {
         const response = await fetch(`https://api.coincap.io/v2/assets/${id}`);
-        if (!response.ok) throw new Error("Criptomoneda no encontrada");
         const data = await response.json();
+        if (!response.ok || !data.data){
+            throw new Error("Criptomoneda no encontrada");
+        }
         setCoin(data.data);
       } catch (err) {
         setError(err.message);
